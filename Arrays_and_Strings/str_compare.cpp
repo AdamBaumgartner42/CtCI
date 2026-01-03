@@ -11,11 +11,23 @@
 #include <string>
 
 
-bool isPerm(){
+bool permutation(){
     return true;
 }
 
 int main (int argc, char* argv[]){
+
+    std::string a;
+    std::string b;
+
+
+    std::cout << "Enter string 1: ";
+    std::cin >> a; 
+
+    std::cout << "Enter string 2: ";
+    std::cin >> b;
+
+    std::cout << "string 1: " << a << " string 2: " << b << std::endl;
 
 }
 
