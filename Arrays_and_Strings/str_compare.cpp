@@ -20,7 +20,6 @@ int main (int argc, char* argv[]){
     std::string a;
     std::string b;
 
-
     std::cout << "Enter string 1: ";
     std::cin >> a; 
 
@@ -28,6 +27,8 @@ int main (int argc, char* argv[]){
     std::cin >> b;
 
     std::cout << "string 1: " << a << " string 2: " << b << std::endl;
+
+    std::cout << "permutation: " << permutation() << std::endl;
 
 }
 
