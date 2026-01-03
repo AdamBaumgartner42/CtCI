@@ -9,26 +9,56 @@
 
 #include <iostream>
 #include <string>
+#include <array>
 
 
-bool permutation(){
+void printLettersInline(std::array<int, 128> &letters) {
+
+    for (int i : letters) {
+        std::cout << i << " ";
+    }
+    std::cout << std::endl;
+}
+
+bool permutation(std::string s, std::string t){
+
+    // permutations must be the same length, any negatives are problem
+    if (s.length() != t.length()) {
+        return false; 
+    }
+
+    // array map to hold the char counts - set to zer0
+    std::array<int, 128> letters{};
+
+    // Map char counts 
+    for (char c : s) {
+        letters[c]++;
+    }
+
+    for (char c : t) {
+        letters[c]--;
+        if (letters[c] < 0) {
+            return false; // going negative means we 
+        }
+    }
+
     return true;
 }
 
 int main (int argc, char* argv[]){
 
-    std::string a;
-    std::string b;
+    std::string a = "taco";
+    std::string b = "cato";
 
-    std::cout << "Enter string 1: ";
-    std::cin >> a; 
+    // std::cout << "Enter string 1: ";
+    // std::cin >> a; 
 
-    std::cout << "Enter string 2: ";
-    std::cin >> b;
+    // std::cout << "Enter string 2: ";
+    // std::cin >> b;
 
     std::cout << "string 1: " << a << " string 2: " << b << std::endl;
 
-    std::cout << "permutation: " << permutation() << std::endl;
+    std::cout << "permutation: " << permutation(a, b) << std::endl;
 
 }
 
