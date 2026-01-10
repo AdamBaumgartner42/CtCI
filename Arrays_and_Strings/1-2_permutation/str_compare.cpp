@@ -45,8 +45,7 @@ bool permutation(std::string s, std::string t){
     return true;
 }
 
-int main (int argc, char* argv[]){
-
+int main () {
     std::string a = "taco";
     std::string b = "cato";
 
@@ -60,5 +59,5 @@ int main (int argc, char* argv[]){
 
     std::cout << "permutation: " << permutation(a, b) << std::endl;
 
+    return 0;
 }
-
