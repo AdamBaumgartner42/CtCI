@@ -24,4 +24,11 @@ int readInt(const char* prompt) {
 int main () {
     int a = readInt("enter a: ");
     int b = readInt("enter b: ");
+
+    a = a - b;
+    b = a + b;
+    a = b - a;
+
+    std::cout << "swapped a: " << a << '\n';
+    std::cout << "swapped b: " << b << '\n';
 }
